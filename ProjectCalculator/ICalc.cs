@@ -1,15 +1,16 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
-namespace ProjectCalculator
+public interface ICalc
 {
-    internal interface ICalc
-    {
-        event EventHandler<EventArgs> GotResult;
+    event EventHandler<EventArgs> GotResult;
 
-        void Sum(int value);
-        void Subtract(int value);
-        void Multiply(int value);
-        void Divide(int value);
-        void CancelLast();
-    }
+    void Sum(double value);
+    void Subtract(double value);
+    void Multiply(double value);
+    void Divide(double value);
+    void CancelLast();
 }
